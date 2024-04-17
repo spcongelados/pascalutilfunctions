@@ -21,3 +21,20 @@ end;
 
 //Sirve para mostrar un array en una linea
 
+
+procedure remplazok(var v:tvector;i:byte);
+var
+  k:real;
+  j:byte;
+begin
+  writeln('Que numero remplazar por 0?');
+  readln(k);
+  for j:=1 to i do
+  begin
+    if v[j]=k then
+    v[j]:=0
+  end;
+end; 
+
+//Sirve para remplazar los elementos del array con valor K por 0
+
