@@ -60,3 +60,53 @@ end;
 
 //Crea un segundo array a partir del primero el cual es igual al primer array eliminando los 0
 
+
+function maxarray(v:tvector;i:byte):integer;
+var
+  max:integer;
+  k:byte;
+begin
+  max:=v[1];
+  for k:=2 to i do
+  begin
+    if v[k]>max then
+    max:=v[k]
+  end;
+  maxarray:=max
+end; 
+
+//Devuelve el maximo en un array
+
+
+procedure arraydiv(v:tvector;var v2:tvector;i:byte;var j:byte;d:integer);
+var
+  k:byte;
+begin
+  j:=0;
+  for k:=1 to i do
+  begin
+    if (v[k]<>0) and (d mod v[k] =0) then
+    begin
+      j:=j+1;
+      v2[j]:=v[k]
+    end;
+  end;
+end; 
+
+//Crea un array con los elementos del vector de origen que son divisores de d
+
+
+function promedioarray(v:tvector;i:byte):real;
+var
+  k:byte;
+  acumulador:integer;
+begin
+  acumulador:=0;
+  for k:=1 to i do
+  begin
+    acumulador:=acumulador+v[k];
+  end;
+  promedioarray:=acumulador/i
+end;   
+
+//Devuelve el promedio de un array
