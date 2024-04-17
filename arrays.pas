@@ -38,3 +38,21 @@ end;
 
 //Sirve para remplazar los elementos del array con valor K por 0
 
+
+procedure compactararreglo(v:tvector;var vcompacto:tvector;i:byte;var k:byte);
+var
+  j:byte;
+begin
+  k:=0;
+  for j:=1 to i do
+  begin
+    if v[j]<>0 then
+    begin
+      k:=k+1;
+      vcompacto[k]:=v[j]
+    end;
+  end;
+end; 
+
+//Crea un segundo array a partir del primero el cual es igual al primer array eliminando los 0
+
