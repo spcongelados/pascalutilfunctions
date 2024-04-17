@@ -1,3 +1,7 @@
+//types
+type
+  tvector=array [1..100] of integer; 
+
 procedure cargararray(var arch:text; var v:tvector; var i:byte);
 begin
   i:=0;
